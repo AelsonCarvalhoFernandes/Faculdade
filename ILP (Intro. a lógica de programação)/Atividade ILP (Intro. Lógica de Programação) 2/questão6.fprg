@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aelson Carvalho"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-13 02:11:59 "/>
+        <attribute name="created" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtTEo5UlNLUDsyMDIyLTA2LTEzOyIwMTo1OTo1MCAiOzM3NTk="/>
+        <attribute name="edited" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtTEo5UlNLUDsyMDIyLTA2LTEzOyIwMjowNTozNSAiOzc7QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtTEo5UlNLUDsyMDIyLTA2LTEzOyIwMTo0MzozNyAiO3F1ZXN0w6NvNS5mcHJnOzkxNzM="/>
+        <attribute name="edited" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtTEo5UlNLUDsyMDIyLTA2LTEzOyIwMjoxMTo1OSAiOzE7Mzg2NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="peso, altura, imc" type="Real" array="False" size=""/>
+            <declare name="s" type="Integer" array="False" size=""/>
+            <output expression="&quot;Escolha entre&#13;&#10;[1] Homem&#13;&#10;[2] Mulher&quot;" newline="False"/>
+            <input variable="s"/>
+            <if expression="s == 1">
+                <then>
+                    <output expression="&quot;Qual o seu peso: kg&quot;" newline="True"/>
+                    <input variable="peso"/>
+                    <output expression="&quot;Qual a sua altura: M&quot;" newline="True"/>
+                    <input variable="altura"/>
+                    <assign variable="imc" expression="peso/(altura^2)"/>
+                    <if expression="imc &lt; 20.7">
+                        <then>
+                            <output expression="&quot;Esta abaixo do peso ideal. IMC =&quot;&amp;imc" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="imc &gt;= 20.08 &amp;&amp; imc &lt;= 27.8">
+                                <then>
+                                    <output expression="&quot;Esta com o peso ideal. IMC =&quot;&amp; imc" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="imc = 27.9 &amp;&amp; imc &lt;= 31.1">
+                                        <then>
+                                            <output expression="&quot;Esta acima do peso. IMC =&quot;&amp;&amp; imc" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="imc &gt; 31.1">
+                                                <then>
+                                                    <output expression="&quot;Esta obeso. IMC =&quot;&amp;&amp; imc" newline="True"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="s == 2">
+                        <then>
+                            <if expression="imc &lt; 19.1">
+                                <then>
+                                    <output expression="&quot;Esta abaixo do peso ideal. IMC =&quot;&amp;imc" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="imc &gt;= 19.2 &amp;&amp; imc &lt;= 27.3">
+                                        <then>
+                                            <output expression="&quot;Esta com o peso ideal. IMC =&quot;&amp; imc" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="imc = 24.4 &amp;&amp; imc &lt;= 32.3">
+                                                <then>
+                                                    <output expression="&quot;Esta acima do peso. IMC =&quot;&amp;&amp; imc" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="imc &gt; 32.3">
+                                                        <then>
+                                                            <output expression="&quot;Esta obeso. IMC =&quot;&amp;&amp; imc" newline="True"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aelson Carvalho"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-13 09:43:35 "/>
+        <attribute name="created" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtTEo5UlNLUDsyMDIyLTA2LTEzOyIwOTozOToxMSAiOzM3NjI="/>
+        <attribute name="edited" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtTEo5UlNLUDsyMDIyLTA2LTEzOyIwOTo0MzozNSAiOzE7Mzg3MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ano" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite o ano:&quot;" newline="True"/>
+            <input variable="ano"/>
+            <if expression="(ano%4 == 0 &amp;&amp; ano%10 !=0) || ano%400 == 0">
+                <then>
+                    <output expression="&quot;O ano &#233; bisexto&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;O ano n&#227;o &#233; bisexto&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

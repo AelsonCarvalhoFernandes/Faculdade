@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aelson Carvalho"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-13 09:38:56 "/>
+        <attribute name="created" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtTEo5UlNLUDsyMDIyLTA2LTEzOyIwOToxNDozMiAiOzM3NTg="/>
+        <attribute name="edited" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtTEo5UlNLUDsyMDIyLTA2LTEzOyIwOTozODo1NiAiOzE7Mzg3OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tipodecompra, valormercadoria, quantparcelas" type="Integer" array="False" size=""/>
+            <declare name="pjuros, pdesconto, valoracrescimo, valorparcelas, valordesconto, valortotal" type="Real" array="False" size=""/>
+            <assign variable="pjuros" expression="0.02"/>
+            <assign variable="pdesconto" expression="0.10"/>
+            <output expression="&quot;Digite a forma de pagamento: [1] A vista, [2] Parcelado&quot;" newline="True"/>
+            <input variable="tipodecompra"/>
+            <output expression="&quot;Digite o valor da mercadoria: R$&quot;" newline="True"/>
+            <input variable="valormercadoria"/>
+            <if expression="tipodecompra == 2">
+                <then>
+                    <output expression="&quot;Quantidade de parcelas:&quot;" newline="True"/>
+                    <input variable="quantparcelas"/>
+                    <assign variable="valoracrescimo" expression="valormercadoria*pjuros"/>
+                    <assign variable="valorparcelas" expression="(valormercadoria/quantparcelas)+valoracrescimo"/>
+                    <output expression="&quot;O valor das&quot;&amp; quantparcelas&amp;&quot; parcelas &#233; R$&quot;&amp; valorparcelas" newline="True"/>
+                </then>
+                <else>
+                    <if expression="tipodecompra == 1">
+                        <then>
+                            <assign variable="valordesconto" expression="valormercadoria*pdesconto"/>
+                            <assign variable="valortotal" expression="valormercadoria - valordesconto"/>
+                            <output expression="&quot;O valor total a pagar &#233; R$&quot;&amp; valortotal" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

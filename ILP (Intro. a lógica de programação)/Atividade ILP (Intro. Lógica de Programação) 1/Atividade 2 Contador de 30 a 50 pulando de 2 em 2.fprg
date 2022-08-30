@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aelson Carvalho"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-03 10:28:44 "/>
+        <attribute name="created" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtQ0NUSE1WSDsyMDIyLTA2LTAzOyIxMDoyNjo1MyAiOzM3NTM="/>
+        <attribute name="edited" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtQ0NUSE1WSDsyMDIyLTA2LTAzOyIxMDoyODo0NCAiOzI7Mzg2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <assign variable="num" expression="30"/>
+            <while expression="num&lt;=50">
+                <output expression="num" newline="True"/>
+                <assign variable="num" expression="num+2"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

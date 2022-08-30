@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aelson Carvalho"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-02 04:08:26 "/>
+        <attribute name="created" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtQ0NUSE1WSDsyMDIyLTA2LTAyOyIwMzoyNzowMCAiOzM3NDc="/>
+        <attribute name="edited" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtQ0NUSE1WSDsyMDIyLTA2LTAyOyIwNDowODoyNiAiOzE7Mzg2Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1, n2, res1, res2, c1, c2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite a base:&quot;" newline="True"/>
+            <input variable="n1"/>
+            <output expression="&quot;Escreva o expoente&quot;" newline="True"/>
+            <input variable="n2"/>
+            <assign variable="res1" expression="n1"/>
+            <assign variable="res2" expression="n1"/>
+            <assign variable="c1" expression="0"/>
+            <assign variable="c2" expression="0"/>
+            <for variable="c1" start="1" end="n2-1" direction="inc" step="1">
+                <for variable="c2" start="1" end="n1-1" direction="inc" step="1">
+                    <assign variable="res1" expression="res1+res2"/>
+                </for>
+                <assign variable="res2" expression="res1"/>
+            </for>
+            <output expression="res1" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

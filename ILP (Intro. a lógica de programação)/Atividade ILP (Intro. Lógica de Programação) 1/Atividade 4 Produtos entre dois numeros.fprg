@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aelson Carvalho"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-03 09:03:15 "/>
+        <attribute name="created" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtQ0NUSE1WSDsyMDIyLTA2LTAzOyIwOTowMDowOSAiOzM3NTQ="/>
+        <attribute name="edited" value="QWVsc29uIENhcnZhbGhvO0RFU0tUT1AtQ0NUSE1WSDsyMDIyLTA2LTAzOyIwOTowMzoxNSAiOzE7Mzg2Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1, n2, multi, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um numero&quot;" newline="True"/>
+            <input variable="n1"/>
+            <output expression="&quot;Digite outro numero&quot;" newline="True"/>
+            <input variable="n2"/>
+            <assign variable="multi" expression="0"/>
+            <for variable="i" start="1" end="n2" direction="inc" step="1">
+                <assign variable="multi" expression="multi+n1"/>
+            </for>
+            <output expression="multi" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
